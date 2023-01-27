@@ -1,0 +1,22 @@
+using System;
+using static System.Console;
+class MoveEstimator
+{
+  static void Main()
+  {
+    double baseRate = 200;
+    double hourlyRate = 150;
+    double milerate = 2;
+    double hours, miles, moveEstimate;
+    string inputValue;
+    WriteLine("Enter the hours for the job: ");
+    inputValue = ReadLine();
+    hours = double.Parse(inputValue);
+
+    WriteLine("Enter the number of miles for the job: ");
+    inputValue = ReadLine();
+    miles = double.Parse(inputValue);
+    moveEstimate = baseRate + (hours * hourlyRate) + (miles * milerate);
+    WriteLine("For a move taking {0} hours and going {1} miles, the estimate is {2:C}", hours, miles, moveEstimate); 
+  }
+}
